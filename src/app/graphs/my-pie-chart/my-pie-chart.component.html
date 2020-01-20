@@ -1,0 +1,45 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<div>
+  <h2 class="header">
+    <kbd>Pie Chart</kbd>
+  </h2>
+  <hr />
+  <p class="description">
+    A Pie Chart is a special chart that uses "pie slices" to show relative sizes
+    of data. It is a really good way to show relative sizes: it is easy to see
+    which movie types are most liked, and which are least liked, at a glance.
+    Using our pie chart, you would be able to see the relative percentage of
+    toppings and pizzas ordered in slices.
+  </p>
+  <div id="divID" alt="piechart"></div>
+  <br />
+  <hr />
+  <div class="container">
+    <p>
+      There are two Pie charts. One for the Pizza and the topping. Please select
+      chart to view
+    </p>
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="../my-pie-chart/pizza"
+          >Pizza Pie Chart</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="../my-pie-chart/topping"
+          >Topping Pie Chart</a
+        >
+      </li>
+    </ul>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- <div style="display: block">
+    <canvas baseChart [data]="pieChartToppingData" [labels]="pieChartToppingLabel" [chartType]="pieChartType"></canvas>
+  </div> -->
+</div>

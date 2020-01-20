@@ -1,0 +1,15 @@
+<body>
+    <div class="form">
+        <br><br>
+        <app-auth-form (submitted)="loginUser($event)">
+            <h1>LOGIN</h1>
+            <a routerLink="/auth/register">Not registered?</a>
+            <button type="submit">
+                Login
+            </button>
+            <div class="error" *ngIf="error">
+                {{ error }}
+            </div>
+        </app-auth-form>
+    </div>
+</body>

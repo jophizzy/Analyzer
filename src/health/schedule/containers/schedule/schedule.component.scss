@@ -1,0 +1,125 @@
+body {
+  background-image: url("../../../../homeBackground.jpg");
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+
+  @media (max-width: 48em) {
+    background-position: right center;
+  }
+}
+
+.poster {
+  background-color: rgba(rgb(15, 14, 15), 0.8);
+  width: 100%;
+  height: 100%;
+  .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+}
+
+@font-face {
+  font-family: draconian;
+  src: url("../../../../Draconian.ttf");
+}
+h1 {
+  position: relative;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: draconian;
+  font-size: 4em;
+  animation: droptop 2.7s;
+
+  @media (max-width: 48em) {
+    font-size: 3em;
+  }
+  @keyframes droptop {
+    from {
+      top: -100px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  span {
+    color: white;
+    text-align: center;
+    font-family: draconian;
+    font-size: 3em;
+    text-transform: lowercase;
+    position: relative;
+    animation-delay: 0s;
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+
+    @media (max-width: 48em) {
+      font-size: 2.5em;
+    }
+    &:before {
+      content: "-";
+      padding-right: 10px;
+      transition: 0.5s all ease-in-out;
+    }
+    &:hover {
+      transition: 0.5s all ease-in-out;
+      color: #42744a;
+      &:before {
+        content: "-";
+        padding-right: 20px;
+        transition: 0.5s all ease-in-out;
+        color: #42744a;
+      }
+    }
+    &:nth-child(1) {
+      animation: opacw 1s;
+    }
+
+    &:nth-child(2) {
+      animation: opacw 1.8s;
+    }
+
+    &:nth-child(3) {
+      animation: opacright 2s;
+    }
+
+    &:nth-child(4) {
+      animation: opacright 3s;
+    }
+    @keyframes opacw {
+      from {
+        left: -200px;
+        opacity: 0;
+      }
+      to {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes opacright {
+      from {
+        right: -200px;
+        opacity: 0;
+      }
+      to {
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

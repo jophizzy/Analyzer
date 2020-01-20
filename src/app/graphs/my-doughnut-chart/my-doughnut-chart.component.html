@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<div>
+  <h2 class="header">
+    <kbd>Doughnut Chart</kbd>
+  </h2>
+  <hr />
+  <p class="description">
+    A Doughnut Chart is essentially a
+    <a routerLink="../my-pie-chart">Pie Chart</a> with an area of the centre cut
+    out. It displays data in rings, where each ring represents a data series. If
+    percentages are displayed in data labels, each ring wil total 100%. The
+    image on the left shows a pie chart while the image on the right shows a
+    doughnut chart.
+  </p>
+  <div id="divID" alt="doughnutchart"></div>
+  <br />
+  <hr />
+  <div class="container">
+    <p>
+      There are two Doughnut charts. One for the Pizza and the topping. Please
+      select chart to view
+    </p>
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="../my-doughnut-chart/pizza"
+          >Pizza Doughnut Chart</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="../my-doughnut-chart/topping"
+          >Topping Doughnut Chart</a
+        >
+      </li>
+    </ul>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- <div style="display: block">
+    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+  </div> -->
+</div>

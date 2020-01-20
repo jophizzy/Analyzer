@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" routerLink="">
+    <i class="fas fa-chart-bar"></i>
+    Ultimate Analyzer
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavbar"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav nav-tabs" *ngIf="user?.authenticated">
+      <li class="nav-item">
+        <a
+          class="nav-link active"
+          routerLink="schedule"
+          routerLinkActive="active"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="meals" routerLinkActive="active"
+          >Data</a
+        >
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class=" nav-link dropdown-toggle"
+          data-toggle="dropdown"
+          routerLinkActive="active"
+          >Charts</a
+        >
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="../graphs/my-bar-chart"
+            >Bar Graph</a
+          >
+          <a class="dropdown-item" routerLink="../graphs/my-doughnut-chart"
+            >Doughnut Chart</a
+          >
+          <a class="dropdown-item" routerLink="../graphs/my-pie-chart"
+            >Pie Chart</a
+          >
+          <a class="dropdown-item" routerLink="../graphs/my-radar-chart"
+            >Radar Chart</a
+          >
+        </div>
+      </li>
+      <!-- <li class="nav-item">
+        <a
+          class="nav-link disabled"
+          routerLink="workouts"
+          routerLinkActive="active"
+          >Stock</a
+        >
+      </li> -->
+    </ul>
+    <ul class="navbar-nav ml-auto" *ngIf="user?.authenticated">
+      <li class="nav-item" *ngIf="user.email === 'admin@test.com'">
+        <a class="nav-link" routerLink="chart"
+          ><i class="fas fa-chart-pie"></i>Charts</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logoutUser()"
+          ><i class="fas fa-sign-out-alt"></i>Logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- <div class="app-header">
+    <div class="wrapper">
+        <p>ddddd</p>
+        <div class="app-header__user-info" *ngIf="user?.authenticated">
+            <span (click)="logoutUser()"></span>
+        </div>
+    </div>
+</div> -->

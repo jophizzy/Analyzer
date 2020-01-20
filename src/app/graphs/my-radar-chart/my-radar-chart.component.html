@@ -1,0 +1,47 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<div>
+  <h2 class="header">
+    <kbd>Radar Chart</kbd>
+  </h2>
+  <hr />
+  <p class="description">
+    A radar chart is a graphical method of displaying multivariate data in the
+    form of a two-dimensional chart of three or more quantitative variables
+    represented on axes starting from the same point. The relative position and
+    angle of the axes is typically uninformative. The radar chart is also known
+    as web chart, spider chart, star chart, star plot, cobweb chart, irregular
+    polygon, polar chart, or Kiviat diagram. It is equivalent to a parallel
+    coordinates plot in polar coordinates.
+  </p>
+  <div id="divID" alt="radarChart"></div>
+  <br />
+  <hr />
+  <div class="container">
+    <p>
+      There are two Radar charts. One for the Pizza and the topping. Please
+      select chart to view
+    </p>
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="../my-radar-chart/pizza"
+          >Pizza Radar Chart</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="../my-radar-chart/topping"
+          >Topping Radar Chart</a
+        >
+      </li>
+    </ul>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!-- <div style="display: block">
+    <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType"></canvas>
+  </div> -->
+</div>
